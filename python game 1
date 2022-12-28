@@ -1,0 +1,80 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOaejtY1dDsHh+GC4bxCGZL",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Bhavya1104/PFLabAssignment04/blob/main/python%20game%201\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 15,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Acd-jXVf3FWz",
+        "outputId": "acf0588d-0d25-4928-9481-36135a07031f"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter any value from 0 to 9:1\n",
+            "Try again\n",
+            "Your score is 10\n",
+            "Number of attempts left is: 2\n",
+            "Enter any value from 0 to 9:8\n",
+            "Try again\n",
+            "Your score is 5\n",
+            "Number of attempts left is: 1\n",
+            "Enter any value from 0 to 9:0\n",
+            "Try again\n",
+            "Your score is 0\n",
+            "Number of attempts left is: 0\n",
+            "Random Number was: 2\n"
+          ]
+        }
+      ],
+      "source": [
+        "import random\n",
+        "c=15\n",
+        "r1=random.randint(0,9)\n",
+        "for i in range(3):\n",
+        "  n=int(input(\"Enter any value from 0 to 9:\"))\n",
+        "  if r1==n:\n",
+        "    print(\"You guessed it right\")\n",
+        "    c=c+15\n",
+        "    print(\"Your score is\",c)\n",
+        "  else:\n",
+        "    print(\"Try again\")\n",
+        "    c=c-5\n",
+        "    print(\"Your score is\",c)\n",
+        "    print(\"Number of attempts left is:\",2-i)\n",
+        "print(\"Random Number was:\",r1)\n",
+        "\n"
+      ]
+    }
+  ]
+}
